@@ -118,3 +118,123 @@ jasfjlda
 sdfj
 a
 */
+
+// statements and expressions --- theoritical part bujhnu matra parne
+// Operators in js
+// 1 Arithmetic operator
+// 2 Assignment operator
+// 3 Comparison operator
+// 4 Logical operator
+// 5 Ternary operator
+// 6 Bitwise operator
+
+// Statements and expressions
+let name5 = "Saujal"; // statement
+const sum = 2 * 5; //statement
+// expression
+// 2 * 5;
+// 6 < 9;
+// 5=6
+
+// operators in js
+// 1 Arithmetic operator --- + - * / %
+let sum1 = 2 + 5;
+let diff = 6 - 3;
+let product = 5 * 6;
+let dvd = 12 / 3;
+let rmd2 = 17 % 3;
+
+console.log(sum1);
+console.log(diff);
+console.log(product);
+console.log(dvd);
+console.log(rmd2);
+
+let nm1 = "nepal";
+let nm2 = "japan";
+
+// string concatination
+console.log("I am from " + nm1 + " and I live in " + nm2);
+
+// tempelate literals -- most imp
+
+// Assignment operator -- = += -= *= /= %=
+
+let a = 2;
+console.log(a);
+
+a += 3; //a = a + 3;
+console.log(a); //5
+
+a -= 2; // a = a-2
+console.log(a); //3
+
+a *= 2; // a = a*2
+console.log(a); //6
+
+a /= 2; // a= a/2
+console.log(a); //3
+a = 9;
+
+a %= 6; //a = a % 6;
+console.log(a); //3
+
+// 3 Comparison operator <  > <= >= == ===
+// comparison operator always return value in boolean -- true false
+
+console.log(5 < 9); //true
+console.log(5 > 9); //false
+console.log(5 <= 6); //true
+console.log(5 >= 5); // true
+console.log("---------------------");
+console.log(5 == "5"); //true
+// == equals but may not be of same data type
+console.log(5 === "5"); //false
+// === equals and of same data type
+
+let typeC = "5" + 5;
+console.log(typeC, typeof typeC);
+console.log("5" * 5);
+
+// operators precedence and associativity
+
+console.log(5 + 6 - (3 * 2) / 4); //BODMAS
+
+// logical operator AND OR NOT
+// AND && -- if both the cases are true true is returned in AND operator
+// OR || -- if one of  the cases is true true is returned in OR operator
+// NOT ! -- if true return false and vice versa
+
+console.log("Learning logical operator");
+console.log("&&");
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+console.log("||");
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+console.log("!");
+console.log(!true);
+console.log(!false);
+
+let ramA = 18;
+let sitaA = 20;
+
+// 5 Ternary operator
+// condition ? statememnt1 : statement2;
+
+let age17 = 25;
+let result = age17 <= 20 ? "You cannot drive" : "You can drive";
+
+if (age17 <= 20) {
+  console.log("You cannot drive");
+} else {
+  console.log("You can drive");
+}
+
+console.log(result);
