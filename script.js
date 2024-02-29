@@ -238,3 +238,97 @@ if (age17 <= 20) {
 }
 
 console.log(result);
+
+// 6 Bitwise operator --- skipped
+
+// tempelate literals
+// statements
+// if  statement
+// if else statement
+// if else if else statement
+// switch case
+
+// template literals -- one of the most important
+let middleName = "Bahadur";
+
+let tryName = "My name is Saujal " + middleName + " Karki";
+
+console.log(tryName);
+
+// strings in template literals
+let tryName1 = `My name is Saujal ${middleName} karki`;
+
+console.log(tryName1);
+
+// statements
+// if -- syntax
+// if (condition) {
+//   result;
+// }
+
+// let age = prompt("What is your age"); //string
+let age = Number(console.log("What is your age")); //Number
+
+console.log(age, typeof age);
+
+if (age <= 10) {
+  console.log("You are a child");
+}
+
+// if else -- syntax
+// if(){}
+// else{}
+
+if (age <= 18) {
+  console.log("You cannot drive");
+} else {
+  console.log("You can drive");
+}
+
+// ternary operator
+// condition ? Statement1 : Statement2;
+
+age <= 18 ? console.log("You cannot drive") : console.log("You can drive");
+
+// if else if else -- syntax
+// if(){}
+// else if(){}
+// else if(){}
+// else{}
+
+if (age <= 0) {
+  console.log("please enter a valid age");
+} else if (age <= 18) {
+  console.log("You are a child");
+} else if (age <= 45) {
+  console.log("You are an adult");
+} else if (age <= 100) {
+  console.log("You are a senior citizen");
+} else {
+  console.log("You are an alien");
+}
+
+console.log("The statement has been terminated");
+
+// switch case
+let day = prompt("What day is today?");
+
+// syntax
+switch (day) {
+  case "Saturday":
+    console.log("This is weekend");
+    break;
+  case "Wednesday":
+    console.log("This is the middle of the week");
+    break;
+  case "Friday":
+    console.log("This is good friday");
+    break;
+  case "Sunday":
+    console.log("This is funday");
+    break;
+  default:
+    console.log("These are the booring days");
+}
+
+// nested statements
