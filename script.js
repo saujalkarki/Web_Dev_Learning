@@ -311,7 +311,7 @@ if (age <= 0) {
 console.log("The statement has been terminated");
 
 // switch case
-let day = prompt("What day is today?");
+let day = console.log("What day is today?");
 
 // syntax
 switch (day) {
@@ -331,4 +331,108 @@ switch (day) {
     console.log("These are the booring days");
 }
 
+console.clear();
+
 // nested statements
+// to use any statement inside itself
+// nested if
+let ramAge = Number(console.log("What is the age of Ram?"));
+
+if (ramAge > 18) {
+  if (ramAge > 30) {
+    if (ramAge > 50) {
+      console.log("You are getting old");
+    }
+  }
+}
+
+// nested if else
+
+let ab = Number(console.log("Enter the value of ab"));
+let bc = Number(console.log("Enter the value of bc"));
+let cd = Number(console.log("Enter the value of cd"));
+
+console.log(ab, bc, cd);
+// 59 64 89
+// 89 64 59
+// 64 89 59
+
+if (ab > bc) {
+  if (ab > cd) {
+    console.log("ab is greatest of all");
+  } else {
+    console.log("cd is greatest of all");
+  }
+} else {
+  if (bc > cd) {
+    console.log("bc is greatest of all");
+  } else {
+    console.log("cd is greatest of all");
+  }
+}
+
+// nested if else if else
+// syntax------------------
+/*
+if(){
+  if(){}
+  else if(){}
+  else if(){}
+  else{}
+}
+else if(){
+  if(){}
+  else if(){}
+  else if(){}
+  else{}
+}
+else if(){
+  if(){}
+  else if(){}
+  else if(){}
+  else{}
+}
+else{
+  if(){}
+  else if(){}
+  else if(){}
+  else{}
+}
+*/
+
+// functions in JavaScript
+
+// about
+// functions are the block of codes, that can be used repeateadly to produce different results according to our input
+// functions are the most important part of any programming language especially in js
+
+// example of function
+function sumAdd(a, b) {
+  // a, b are function parameters
+  return a + b;
+}
+
+sumAdd(5, 5); //10 // function arguments
+sumAdd(4, 4); //8
+sumAdd(1, 10); //11
+sumAdd(2, 8); //10
+
+console.log(5 + 5);
+console.log(4 + 6);
+console.log(2 + 8);
+
+// function definition
+function calcAvg(num1, num2) {
+  // function parameters (num1, num2)
+  let avg = (num1 + num2) / 2;
+
+  return avg; //return statement
+}
+
+// function call
+console.log(calcAvg(6, 4)); // function Arguments //5
+
+// types of functions
+// function Decleration
+// function Expression
+// arrow function
