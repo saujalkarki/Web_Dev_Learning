@@ -433,6 +433,59 @@ function calcAvg(num1, num2) {
 console.log(calcAvg(6, 4)); // function Arguments //5
 
 // types of functions
+
+console.log(product1(8, 2)); //16
+// console.log(product2(8, 2)); //16
+// console.log(product3(8, 2)); //16
+
 // function Decleration
+function product1(x, y) {
+  let prdct = x * y;
+  return prdct;
+}
+
+console.log(product1(2, 4)); //8
+
 // function Expression
+let product2 = function (x, y) {
+  let prdct2 = x * y;
+
+  return prdct2;
+};
+
+console.log(product2(5, 6)); //30
+
 // arrow function
+let product3 = (x, y) => {
+  let prdct3 = x * y;
+
+  return prdct3;
+};
+
+console.log(product3(9, 6)); //54
+
+console.log(product1(5, 2)); //decleration-- can be called before decleration
+
+console.log(product2(6, 3)); //expression-- cannot be called before decleration
+console.log(product3(4, 1)); //arrow-- cannot be called before decleration
+
+// Recursion in JS
+// Recursion -- to call function itself inside the own function body
+// Recursion -- recurring -- re occur -- feri feri aaunu
+
+// factorial // 6! -- 6*5*4*3*2*1 = 36*2 = 72 1!=1 0!=1
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+console.log(factorial(5));
+
+// 5*factorial(5-1)
+// 5*factorial(4)
+// 5*4*factorial(3)
+// 5*4*3*factorial(2)
+// 5*4*3*2*1 -- 120
