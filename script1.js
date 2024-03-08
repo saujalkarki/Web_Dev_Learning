@@ -69,3 +69,5 @@ do {
 
 // Arrays
 // Arrays Methods
+// Objects
+// object methods
