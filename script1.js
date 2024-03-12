@@ -157,3 +157,116 @@ console.log(typeof tryAr1);
 
 console.log(tryAr1.toString());
 console.log(typeof tryAr1.toString());
+
+// Objects -- one of the data types in JS
+// objects are always in key value pair
+// we can store multiple datas inside an object -- that data may be of any data types
+
+// array of objects
+
+let learners = [
+  {
+    name: "Saujal",
+    country: "Nepal",
+    age: 21,
+  },
+  {
+    name: "Naresh",
+    country: "Japan",
+    age: 23,
+  },
+  {
+    name: "Bidhusha",
+    country: "Nepal",
+    age: 22,
+  },
+  {
+    name: "Ila",
+    country: "Nepal",
+    age: 22,
+  },
+];
+
+console.log(learners);
+console.log(learners[0]);
+console.log(learners[1]);
+console.log(learners[2]);
+console.log(learners[3]);
+
+console.log(learners[2].country);
+
+console.log(learners[3].name); // Ila
+learners[3].name = "Tarjan";
+console.log(learners[3].name); // Tarjan
+
+// Syntax
+// let objectName = {
+//   key: "pair",
+//   key: 1,
+//   key: true,
+// };
+
+let saujalPerDel = {
+  name: "Saulaj",
+  caste: "Karki",
+  nationality: "Nepali",
+  age: 21,
+  married: false,
+  favSports: ["Basketball", "Football", "Badminton"],
+  sum: function (a, b) {
+    return a + b;
+  },
+  professionalD: {
+    role: "MERN dev",
+    exp: 1,
+    job: false,
+    technology: ["JS", "React", "Node", "Express"],
+  },
+};
+
+console.log(saujalPerDel);
+
+saujalPerDel.name = "Saujal";
+
+console.log(saujalPerDel);
+
+saujalPerDel.married = 25;
+
+console.log(saujalPerDel);
+
+console.log(saujalPerDel.favSports);
+
+saujalPerDel.favSports[2] = "Futsal";
+
+console.log(saujalPerDel.favSports);
+
+console.log(saujalPerDel.professionalD.technology);
+
+saujalPerDel.professionalD.technology.unshift("HTML5");
+
+console.log(saujalPerDel.professionalD.technology);
+
+saujalPerDel.professionalD.technology.push("CSS3");
+
+console.log(saujalPerDel.professionalD.technology);
+
+// fetching data from objects
+console.log(saujalPerDel.name); // returns object_key value
+console.log(saujalPerDel["name"]); // returns object_key value
+
+console.log(saujalPerDel.caste);
+console.log(saujalPerDel.nationality);
+console.log(saujalPerDel.age);
+console.log(saujalPerDel.married);
+console.log(saujalPerDel.favSports);
+console.log(saujalPerDel.favSports[1]); // Football
+console.log(saujalPerDel.sum(2, 6)); // 29
+
+console.log(saujalPerDel.professionalD);
+console.log(saujalPerDel["professionalD"]);
+
+console.log(saujalPerDel.professionalD.role);
+console.log(saujalPerDel.professionalD["role"]);
+console.log(saujalPerDel["professionalD"].role);
+console.log(saujalPerDel.professionalD.technology);
+console.log(saujalPerDel.professionalD.technology[0]);
