@@ -260,6 +260,18 @@ let tryName1 = `My name is Saujal ${middleName} karki`;
 
 console.log(tryName1);
 
+// revising template literals
+let tr1 = "Saujal";
+let tr2 = "Nepal";
+let agg = 21;
+
+console.log(tr1 + " is " + agg + " years old. " + tr1 + " lives in " + tr2);
+
+// template literals
+// -- backtick      ``
+
+console.log(`${tr1} is ${agg} years old. ${tr1} lives in ${tr2}`);
+
 // statements
 // if -- syntax
 // if (condition) {

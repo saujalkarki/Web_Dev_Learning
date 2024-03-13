@@ -270,3 +270,9 @@ console.log(saujalPerDel.professionalD["role"]);
 console.log(saujalPerDel["professionalD"].role);
 console.log(saujalPerDel.professionalD.technology);
 console.log(saujalPerDel.professionalD.technology[0]);
+
+// BASICS -- every programming language
+
+// Nothing --
+
+// DOM Manipulation
