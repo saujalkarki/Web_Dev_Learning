@@ -275,4 +275,28 @@ console.log(saujalPerDel.professionalD.technology[0]);
 
 // Nothing --
 
+// JS===DOM Manipulation
 // DOM Manipulation
+// DOM- Document Object Model
+
+const tryV = document.querySelector(".div1");
+
+console.log(document.querySelector("h5"));
+console.log();
+console.log(document.querySelector("#section1"));
+
+console.log(document.querySelector("h1"));
+console.log(document.querySelectorAll("h1"));
+console.log(document.querySelectorAll("h1")[4]);
+
+console.log(document.getElementById("section1"));
+console.log(document.getElementsByClassName("div1")[0]);
+console.log(document.getElementsByTagName("div")[0]);
+// document.getElementsByName();
+
+document.addEventListener("click", function () {
+  tryV.textContent = "Hello World";
+});
+
+// Guess the number
+// Todo List
