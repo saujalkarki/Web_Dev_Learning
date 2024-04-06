@@ -282,7 +282,7 @@ console.log(saujalPerDel.professionalD.technology[0]);
 const tryV = document.querySelector(".div1");
 
 console.log(document.querySelector("h5"));
-console.log();
+console.log(tryV);
 console.log(document.querySelector("#section1"));
 
 console.log(document.querySelector("h1"));
@@ -294,8 +294,55 @@ console.log(document.getElementsByClassName("div1")[0]);
 console.log(document.getElementsByTagName("div")[0]);
 // document.getElementsByName();
 
-document.addEventListener("click", function () {
-  tryV.textContent = "Hello World";
+// document.addEventListener("click", function () {
+//   tryV.textContent = "Hello World";
+// });
+
+console.clear();
+
+document;
+
+console.log(document);
+
+// document.querySelector();
+console.log(document.querySelector("h1"));
+console.log(document.querySelector("h2"));
+console.log(document.querySelector(".nepali"));
+console.log(document.querySelector("#japanese"));
+
+// document.querySelectorAll();
+console.log(document.querySelectorAll("h1"));
+console.log(document.querySelectorAll("h1")[2]);
+console.log(document.querySelectorAll("h5"));
+console.log(document.querySelectorAll("h5")[0]);
+
+// document.getElementById();
+console.log(document.getElementById("DOM"));
+
+// document.getElementsByClassName();
+console.log(document.getElementsByClassName("apple"));
+console.log(document.getElementsByClassName("apple")[0]);
+
+// document.getElementsByTagName();
+console.log(document.getElementsByTagName("body"));
+console.log(document.getElementsByTagName("body")[0]);
+
+// document.getElementsByName();
+
+// Event Listeners
+let aple = document.querySelector("img");
+aple.addEventListener("click", function () {
+  console.log("CLICKED JUST NOW");
+});
+
+let khatra = document.getElementById("japanese");
+
+khatra.addEventListener("mouseenter", function () {
+  khatra.textContent = "Bidhusha is the tooper of our CLZ";
+});
+
+khatra.addEventListener("mouseout", function () {
+  khatra.textContent = "Bidhusha is the tooper of whole Nepal";
 });
 
 // Guess the number
