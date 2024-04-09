@@ -337,12 +337,33 @@ aple.addEventListener("click", function () {
 
 let khatra = document.getElementById("japanese");
 
+khatra.addEventListener("click", function () {
+  khatra.textContent = "Bidusha is a good girl";
+});
+
+khatra.addEventListener("dblclick", function () {
+  khatra.textContent = "Bidusha is a good girl12";
+});
+
+khatra.addEventListener("keydown", function () {
+  khatra.textContent = "Bidusha is a good girl12";
+});
+
+khatra.addEventListener("keypress", function () {
+  khatra.textContent = "Bidusha is a good girl12";
+});
+
+khatra.addEventListener("keyup", function () {
+  khatra.textContent = "Bidusha is a good girl12";
+});
+
 khatra.addEventListener("mouseenter", function () {
-  khatra.textContent = "Bidhusha is the tooper of our CLZ";
+  khatra.textContent = "Bidusha is a good girl123";
 });
 
 khatra.addEventListener("mouseout", function () {
-  khatra.textContent = "Bidhusha is the tooper of whole Nepal";
+  khatra.textContent = "Bidusha is a good girl1234";
+  khatra.style.color = "red";
 });
 
 // Guess the number
