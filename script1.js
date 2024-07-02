@@ -368,3 +368,121 @@ khatra.addEventListener("mouseout", function () {
 
 // Guess the number
 // Todo List
+
+// Before React and Node js
+
+// js advance topics
+
+// Functions => Definition, Declaration, Arrow
+// Array => objects =>
+// Template Literals =>
+// REST, SPREAD operators =>
+// Synchronous and Asynchronous =>
+// callback functions =>
+// fetch
+// Promises => handling Promises => .then(), async and await
+// Error Handling in JavaScript => try Catch
+// JSON format in JS=>
+// Higher Order Functions => Map, forEach, filter, reduce
+
+// Object in javaScript
+// Key value pair
+
+const abObj = {
+  name: "Saujal",
+  caste: "Karki",
+  age: 24,
+};
+
+// JSON-JavaScript Object Notation
+// key value pair
+
+// {
+//   "name":"Saujal",
+//   "caste": "Karki",
+//   "age": "24",
+// }
+
+console.log("abObj", abObj);
+console.log("JSON", JSON.stringify(abObj));
+
+// Backend bata aako savai datas mostly in JSON format
+
+async function fetched() {
+  const fetched = await fetch(
+    "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/itahari?unitGroup=us&key=93Y5PBPC3H2UWBWWP433VGUZ8"
+  );
+
+  return fetched.message;
+}
+
+console.log(fetched());
+
+console.clear();
+
+// REST operator --> ...
+function sum(a, b, c, d) {
+  return [a, b, c, d];
+}
+
+console.log("without rest operator", sum(1, 2, 3));
+console.log("without rest operator", sum(2, 3, 4, 5));
+console.log("without rest operator", sum(1));
+
+function sum2(...args) {
+  let a = [];
+  args.map((arg) => {
+    a.push(arg + 1);
+  });
+  console.log(a);
+}
+
+// console.log("with rest operator", sum2(1, 2, 3));
+// console.log("with rest operator", sum2(2, 3, 4, 5));
+
+sum2(2, 3, 4, 5);
+sum2(1);
+
+// SPREAD operator --> ...
+// 1.spreading elements in array
+const arr20 = [2, 3, 4];
+const arr21 = [5, 6, 7];
+
+const arr22 = [arr20[0], arr20[1], arr20[2], arr21[0], arr21[1], arr21[2]];
+console.log(arr22);
+
+const arr23 = [...arr20, ...arr21];
+console.log(arr23);
+
+const arr24 = [arr20, arr21];
+console.log(arr24);
+
+// 2.spreading elements in function call
+sum2(2, 3, 4, 5, 6, 7);
+
+const arr56 = [2, 3, 4, 5, 6, 7];
+
+sum2(...arr56);
+
+// 3.spreading elements in objects
+const obj21 = {
+  firstName: "Saujal",
+  lastName: "Karki",
+  age: 20,
+};
+
+const obj22 = {
+  ...obj21,
+  married: false,
+  grade: 14,
+};
+
+const obj23 = {
+  ...obj22,
+  firstName: "Naresh",
+  grade: 15,
+  friends: ["Nischal", "Nirmal"],
+};
+
+console.log(obj22);
+console.log(obj23);
