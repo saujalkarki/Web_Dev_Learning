@@ -335,36 +335,29 @@ aple.addEventListener("click", function () {
   console.log("CLICKED JUST NOW");
 });
 
-let khatra = document.getElementById("japanese");
+// khatra.addEventListener("click", function () {
+//   khatra.textContent = "Bidusha is a good girl";
+// });
 
-khatra.addEventListener("click", function () {
-  khatra.textContent = "Bidusha is a good girl";
-});
+// khatra.addEventListener("dblclick", function () {
+//   khatra.textContent = "Bidusha is a good girl12";
+// });
 
-khatra.addEventListener("dblclick", function () {
-  khatra.textContent = "Bidusha is a good girl12";
-});
+// khatra.addEventListener("keydown", function () {
+//   khatra.textContent = "Bidusha is a good girl12";
+// });
 
-khatra.addEventListener("keydown", function () {
-  khatra.textContent = "Bidusha is a good girl12";
-});
+// khatra.addEventListener("keypress", function () {
+//   khatra.textContent = "Bidusha is a good girl12";
+// });
 
-khatra.addEventListener("keypress", function () {
-  khatra.textContent = "Bidusha is a good girl12";
-});
+// khatra.addEventListener("keyup", function () {
+//   khatra.textContent = "Bidusha is a good girl12";
+// });
 
-khatra.addEventListener("keyup", function () {
-  khatra.textContent = "Bidusha is a good girl12";
-});
-
-khatra.addEventListener("mouseenter", function () {
-  khatra.textContent = "Bidusha is a good girl123";
-});
-
-khatra.addEventListener("mouseout", function () {
-  khatra.textContent = "Bidusha is a good girl1234";
-  khatra.style.color = "red";
-});
+// khatra.addEventListener("mouseenter", function () {
+//   khatra.textContent = "Bidusha is a good girl123";
+// });
 
 // Guess the number
 // Todo List
@@ -422,12 +415,14 @@ console.clear();
 
 // REST operator --> ...
 function sum(a, b, c, d) {
-  return [a, b, c, d];
+  console.log([a, b, c, d]);
 }
 
-console.log("without rest operator", sum(1, 2, 3));
-console.log("without rest operator", sum(2, 3, 4, 5));
-console.log("without rest operator", sum(1));
+sum(1, 2, 3); // [1,2,3,undefined]
+
+// console.log("without rest operator", sum(1, 2, 3));
+// console.log("without rest operator", sum(2, 3, 4, 5));
+// console.log("without rest operator", sum(1));
 
 function sum2(...args) {
   let a = [];
@@ -486,3 +481,76 @@ const obj23 = {
 
 console.log(obj22);
 console.log(obj23);
+
+// callback functions
+// Higher Order Functions --> forEach, map, filter, reduce
+
+// fucntion that is passed to another function as an arguments and called at some point of that function
+function abc(a, b, callback) {
+  console.log(callback()); // --> fucntion bcd that is passed as callback is known as callback function
+}
+
+function bcd() {
+  return "bcd";
+}
+
+abc("a", "b", bcd);
+
+let khatra = document.getElementById("japanese");
+
+khatra.addEventListener("click", function () {
+  khatra.textContent = "Bidusha is a good girl1234";
+  khatra.style.color = "red";
+});
+
+// js inbuilt function --> setTimtout
+
+setTimeout(function () {
+  console.log("Saujal");
+}, 5000);
+
+// HOF --> Higher Order Functions
+// The function that takes another function as an argument is known as Higher Order function
+// The fucntion that is passed to another function as an arguments  is callback function
+
+function greet(cb, name) {
+  return `${cb()} ${name}`;
+}
+
+function welcome() {
+  return "Welcome!";
+}
+
+console.log(greet(welcome, "Naresh"));
+
+// Here in the above code snippet
+// cb is a callback function
+// greet is a higher order function
+
+function tip(cbFunc, tipP, total) {
+  let tip;
+  tip = cbFunc(tipP, total);
+  return tip;
+}
+
+function tipCalc(per, billAmt) {
+  return (billAmt * per) / 100; //--> 100*5==500/100=5
+}
+
+console.log(tip(tipCalc, 5, 100));
+function tip(cbFunc, tipP, total) {
+  let tip;
+  tip = total(tipP, cbFunc);
+  return tip;
+}
+
+function tipCalc(per, billAmt) {
+  return (billAmt * per) / 100; //--> 100*5==500/100=5
+}
+
+console.log(tip(1000, 10, tipCalc));
+
+// callback function-->
+// Higher Order function-->
+
+// Js inbuilt higher Order Functions --> map, filter, reduce, forEach
