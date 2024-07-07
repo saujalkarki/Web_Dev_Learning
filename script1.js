@@ -505,9 +505,9 @@ khatra.addEventListener("click", function () {
 
 // js inbuilt function --> setTimtout
 
-setTimeout(function () {
-  console.log("Saujal");
-}, 5000);
+// setTimeout(function () {
+//   console.log("Saujal");
+// }, 5000);
 
 // HOF --> Higher Order Functions
 // The function that takes another function as an argument is known as Higher Order function
@@ -528,9 +528,11 @@ console.log(greet(welcome, "Naresh"));
 // greet is a higher order function
 
 function tip(cbFunc, tipP, total) {
-  let tip;
-  tip = cbFunc(tipP, total);
-  return tip;
+  // let tip;
+  // tip = cbFunc(tipP, total);
+  // return tip;
+
+  return `The tip given by the customer is ${cbFunc(tipP, total)}%.`;
 }
 
 function tipCalc(per, billAmt) {
@@ -538,19 +540,63 @@ function tipCalc(per, billAmt) {
 }
 
 console.log(tip(tipCalc, 5, 100));
-function tip(cbFunc, tipP, total) {
-  let tip;
-  tip = total(tipP, cbFunc);
-  return tip;
-}
 
-function tipCalc(per, billAmt) {
-  return (billAmt * per) / 100; //--> 100*5==500/100=5
-}
+// function tip(cbFunc, tipP, total) {
+//   let tip;
+//   tip = total(tipP, cbFunc);
+//   return tip;
+// }
 
-console.log(tip(1000, 10, tipCalc));
+// function tipCalc(per, billAmt) {
+//   return (billAmt * per) / 100; //--> 100*5==500/100=5
+// }
+
+// console.log(tip(1000, 10, tipCalc));
 
 // callback function-->
 // Higher Order function-->
 
 // Js inbuilt higher Order Functions --> map, filter, reduce, forEach
+
+// map --> manipulating an array --> always returns an array
+const a = [1, 2, 3, 4, 5, 6, 7, 8]; // [1,3,5,7,9,11,13,15]
+
+const returnedArray = a.map(function (element, index) {
+  return element + index;
+});
+
+console.log(returnedArray);
+
+const returnedArray1 = returnedArray.map((data, index) => {
+  return `This is the ${index} index of the array and it's value is ${data}.`;
+});
+
+console.log(returnedArray1);
+
+// filter --> manipulating an array --> always returns an array
+
+// [1, 2, 3, 4, 5, 6, 7, 8]
+
+const filteredArray = a.filter((element) => {
+  return element % 2 === 0;
+});
+
+console.log(filteredArray);
+
+const populations = [
+  { name: "Saujal Karki", age: 21, married: false },
+  { name: "Nischal Karki", age: 25, married: true },
+  { name: "Naresh", age: 31, married: true },
+  { name: "Bidusha", age: 19, married: false },
+];
+
+const marriedPopulation = populations.filter((element) => {
+  return element.married === true;
+});
+
+const unMarriedPopulation = populations.filter((element) => {
+  return element.married === false;
+});
+
+console.log(marriedPopulation);
+console.log(unMarriedPopulation);
