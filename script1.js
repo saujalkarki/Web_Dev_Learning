@@ -600,3 +600,25 @@ const unMarriedPopulation = populations.filter((element) => {
 
 console.log(marriedPopulation);
 console.log(unMarriedPopulation);
+
+// reduce --> manipulating array --> returns single value
+
+// [1, 2, 3, 4, 5, 6, 7, 8] --> reduced to a single value
+
+const singleValue = a.reduce((accumulator, data) => {
+  return accumulator + data;
+}, 0); // 36
+
+console.log(singleValue);
+
+// forEach --> manipulating array --> doesn't returns an array --> instead returns single value for each of the element
+
+// [1, 2, 3, 4, 5, 6, 7, 8]
+
+const returnedArray2 = [];
+
+a.forEach((data, index) => {
+  returnedArray2.push(data + index);
+});
+
+console.log(returnedArray2);
