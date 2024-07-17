@@ -622,3 +622,81 @@ a.forEach((data, index) => {
 });
 
 console.log(returnedArray2);
+
+// synchronous and asynchrounous nature
+
+// synchrounous --> This code wait for everyline to be executed
+
+console.log("saujal"); // takes 0.1 sec
+console.log("Karki"); // takes 6 sec
+console.log("Karki1"); // takes 0.1 sec
+
+// asynchronous --> This code doesn't waits everyline to be executed
+
+console.log("saujal"); // takes 0.1 sec
+console.log("Karki"); // takes 6 sec
+console.log("Karki1"); // takes 1 sec
+console.log("Karki2"); // takes 1 sec
+console.log("Karki3"); // takes 1 sec
+console.log("Karki4"); // takes 1 sec
+console.log("Karki5"); // takes 1 sec
+console.log("Karki6"); // takes 1 sec
+
+// synchronous code
+
+// console.log("Start");
+
+// function wait1(time) {
+//   const start = Date.now();
+
+//   let now = start;
+
+//   while (now - start < time) {
+//     now = Date.now();
+//   }
+
+//   return now;
+// }
+
+// wait1(20000); // holds for 2 sec
+
+// console.log("End");
+
+// asynchronous code
+// handling promises
+// 1. .then()
+// 2. .async await
+
+// .then
+console.log("Start");
+
+function wait(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+}
+
+wait(5000).then(function () {
+  console.log("This is Loading");
+});
+
+console.log("End");
+
+// async await
+
+console.log("Start");
+
+function wait(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+}
+
+async function Japan() {
+  await wait(6000);
+  console.log("This is Loading");
+}
+
+Japan();
+
+console.log("End");
