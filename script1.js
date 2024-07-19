@@ -676,9 +676,12 @@ function wait(time) {
   });
 }
 
-wait(5000).then(function () {
-  console.log("This is Loading");
-});
+wait(5000)
+  .then(function () {
+    console.log("This is Loading");
+  })
+  .catch((err) => console.log(err))
+  .finally(console.log("This promise is resovled at the best."));
 
 console.log("End");
 
@@ -700,3 +703,57 @@ async function Japan() {
 Japan();
 
 console.log("End");
+
+// fetch , try catch
+
+// .then
+// fetch("facebook.com")
+//   .then(data)
+//   .catch((err) => console.log(err));
+
+// try {
+//   async function abcdefg() {
+//     const data = await fetch("facebook.com");
+//     console.log(data);
+//   }
+// } catch (err) {
+//   console.log(err);
+// }
+
+let myHeaders = new Headers();
+myHeaders.append("apikey", "cO2sykjxcHwP2FjeIH2NCEGnHlTHuVbr");
+
+let requestOptions = {
+  method: "GET",
+  redirect: "follow",
+  headers: myHeaders,
+};
+
+// http Verbs
+// GET POST PATCH DELETE UPDATE --> CRUD operations
+
+// fetch(
+//   "https://api.apilayer.com/currency_data/live?source=USD&currencies=EUR",
+//   requestOptions
+// )
+//   .then((currency) => currency.text())
+//   .then((currencies) => console.log(currencies))
+//   .catch((err) => console.log(err));
+
+// console.log("Data fetched successfully.");
+
+async function currencyExchange() {
+  try {
+    const currency = await fetch(
+      "https://api.apilayer.com/currency_data/live?source=USD&currencies=EUR",
+      requestOptions
+    );
+
+    const currency1 = await currency.text();
+    console.log(currency1);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+currencyExchange();
