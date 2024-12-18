@@ -1,3 +1,5 @@
+"use strict";
+
 // This code is written for learning js, coded by Saujal karki
 
 console.log("Hello World");
