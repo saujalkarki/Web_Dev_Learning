@@ -223,3 +223,17 @@ const handlePromise = async () => {
 handlePromise();
 
 console.log("try this2");
+
+const orA = [1, 2, 3];
+
+orA.map((ar) => console.log(ar + 1));
+console.log(orA);
+
+orA.forEach((ar) => console.log(ar + 1));
+console.log(orA);
+
+const arr0 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(arr0.slice(1, 5));
+console.log(arr0.splice(1, 5));
+console.log(arr0);
