@@ -3,115 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DOM Traversal</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <p>This is a paragraph tag.</p>
-    <div>This is a single div</div>
+    <div class="container">
+      <h2>DOM Traversal Example</h2>
+      <div class="parent">
+        <p class="child first-child">Child 1</p>
+        <p class="child second-child">Child 2</p>
+        <p class="child last-child">Child 3</p>
+      </div>
+    </div>
 
-    <span>This is a paragraph tag.</span>
-    <span>This is a single div</span>
+    <h2>Event Bubbling Example</h2>
 
-    <form>
-      <label> description </label>
-      <input type="" />
-      <textarea cols="10"></textarea>
-      <select name="" id="">
-        <option value="">option1</option>
-        <option value="">option2</option>
-        <option value="">option3</option>
-        <option value="">option4</option>
-        <option value="">option5</option>
-      </select>
+    <div id="grandparent" class="box">
+      Grandparent
+      <div id="parent" class="box">
+        Parent
+        <button id="child" class="button">Click Me</button>
+      </div>
+    </div>
 
-      <input type="text" required minlength="5" maxlength="10" />
-      <input type="email" />
-      <button>Submit</button>
-    </form>
-    <table border="2px">
-      <thead>
-        <tr>
-          <th>Sn.</th>
-          <th>Name</th>
-          <th>Class</th>
-          <th>Marks</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1.</td>
-          <td>Dipendra</td>
-          <td rowspan="3">Web development</td>
-          <td>08</td>
-        </tr>
-        <tr>
-          <td>2.</td>
-          <td>Amesha</td>
-          <td>500</td>
-        </tr>
-        <tr>
-          <td>3.</td>
-          <td>Dinesh</td>
-          <td>9</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="2">Total</td>
-          <td colspan="2">517</td>
-        </tr>
-      </tfoot>
-    </table>
+    <ul id="list">
+      <li id="item1">Item 1</li>
+      <li id="item2">Item 2</li>
+      <li id="item3">Item 3</li>
+    </ul>
 
-    <dl>
-      <dt>Apple</dt>
-      <dd>An apple a day keeps the doctor away.</dd>
-      <dt>Mango</dt>
-      <dd>Mango is the second name of kamana.</dd>
-    </dl>
-
-    <!-- <video controls>
-      <source src="../1. Section Overview.mp4" type="video/mp4" />
-    </video> -->
-
-    <!-- <video controls>
-      <source src="../1. Section Overview.mp4" type="video/mp4" />
-    </video> -->
-
-    <iframe src="../1. Section Overview.mp4" frameborder="0"></iframe>
-
-    <iframe
-      width="935"
-      height="526"
-      src="https://www.youtube.com/embed/hwIA8pNIu48"
-      title='Alam Aadesh "Ke Garu" | The Voice of Nepal Season 6 -2025'
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
-
-    <audio controls>
-      <source
-        src="https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3"
-        type="audio/mp3"
-      />
-    </audio>
-    <iframe
-      src="https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3"
-    ></iframe>
-
-    <!-- <iframe src="../1. Section Overview.mp4" frameborder="0"></iframe>
-    <iframe
-      width="935"
-      height="526"
-      src="https://www.youtube.com/embed/ViX7R3oVv5Q"
-      title="The Voice of Nepal Season 6 - 2025 - Episode 08 | Blind Audition"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe> -->
+    <script src="./abc.js"></script>
   </body>
 </html>

@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+.container {
+  border: 2px solid #333;
+  padding: 20px;
+  display: inline-block;
+  background-color: #f8f9fa;
+}
+
+.parent {
+  border: 2px solid blue;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.child {
+  border: 1px solid red;
+  padding: 10px;
+  margin: 5px;
+  background-color: lightgray;
+}
+
+.box {
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px auto;
+  width: 300px;
+}
+
+#grandparent {
+  background-color: lightcoral;
+}
+
+#parent {
+  background-color: lightblue;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
